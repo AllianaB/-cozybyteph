@@ -1,6 +1,6 @@
 # CozyByte — Software & Web Solutions
 
-A six-page static marketing website for a Philippines-based development studio. Includes a custom botanical computer mascot, a bracket-and-sprout SVG logo, subtle falling petals with a pause control and reduced-motion support, and three clearly labelled interactive concept projects.
+A modern six-page static marketing website for a Philippines-based development studio. Includes a custom botanical computer mascot, a bracket-and-sprout SVG logo, subtle falling petals with a pause control and reduced-motion support, and three clearly labelled interactive concept projects. The homepage pairs direct business-focused copy with an original HTML/CSS product interface; the mascot is a small supporting detail.
 
 ## Stack and local development
 
@@ -19,6 +19,10 @@ The development server is optional; any static HTTP server that serves directory
 Deploy `dist/` to a static host after review. Use `npm run build` as the build command, `dist` as output, and Node.js 20+. No production deployment is automated. The Sites manifest identifies the saved Site and static output; it does not publish on its own. Do not enable deployment workflows until hosting and privacy details are approved.
 
 Set `SITE_URL` to the real HTTPS origin (no path), then rebuild. Only then will canonical links, absolute Open Graph sharing assets, sitemap.xml and an indexable robots.txt be generated. Until a domain is confirmed, pages carry noindex/nofollow and robots.txt blocks indexing. Verify public-host access controls independently; robots directives are not access control.
+
+## Vercel handoff
+
+Import the GitHub repository into Vercel when ready. Select the `feat/cozybyte-studio` branch while reviewing, Framework Preset **Other**, build command `npm run build`, output directory `dist`. The tracked `vercel.json` also provides these settings. No dependency installation is needed. Set `SITE_URL` only after confirming the public origin, and `CONTACT_ENDPOINT` only after the secure handler and privacy notice are ready. Preview URLs should remain noindex. Vercel connection and public launch are not performed automatically.
 
 ## Contact form configuration
 

@@ -3,5 +3,5 @@ const htmls={};for(const slug of Object.keys(pages)){const path=slug==='home'?'d
 
 assert(htmls.work.includes('not completed client engagements'));assert(htmls.contact.includes('Enquiries are not connected yet'));assert(htmls.privacy.includes('draft'));assert((await readFile('public/style.css','utf8')).includes('prefers-reduced-motion'));
 function lum(hex){const c=hex.match(/\w\w/g).map(v=>parseInt(v,16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return c[0]*.2126+c[1]*.7152+c[2]*.0722}function ratio(a,b){const l=[lum(a),lum(b)].sort((a,b)=>b-a);return(l[0]+.05)/(l[1]+.05)}
-for(const [fg,bg]of [['264D42','FFF8EF'],['53645A','FFF8EF'],['85545F','FFF8EF'],['264D42','B7CBA5'],['70454E','F4E3E1'],['FFF8EF','264D42'],['8C283A','FBE6E3']]){const c=ratio(fg,bg);assert(c>=4.5,`Contrast ${fg}/${bg}: ${c}`);console.log(`Contrast #${fg} on #${bg}: ${c.toFixed(2)}:1`)}
+for(const [fg,bg]of [['264D42','FAF9F5'],['59645D','FAF9F5'],['85545F','FAF9F5'],['264D42','B7CBA5'],['70454E','F4E3E1'],['FFF8EF','264D42'],['8C283A','FBE6E3']]){const c=ratio(fg,bg);assert(c>=4.5,`Contrast ${fg}/${bg}: ${c}`);console.log(`Contrast #${fg} on #${bg}: ${c.toFixed(2)}:1`)}
 console.log('PASS: six pages, local links/assets/anchors, metadata, concept labels, contact setup notice, reduced motion, AA text palette.');
